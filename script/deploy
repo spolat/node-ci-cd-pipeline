@@ -1,0 +1,8 @@
+#!/bin/sh
+ssh jenkins@68.183.219.216 <<EOF
+ cd ~/node-ci-cd-pipeline
+ git pull
+ npm install — production
+ forever restart 0
+ exit
+EOF
